@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { AppModule } from 'src/app/app.module';
 
 import { ProductsHeaderComponent } from './products-header.component';
 
@@ -8,9 +9,9 @@ describe('ProductsHeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductsHeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductsHeaderComponent],
+      imports: [AppModule],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProductsHeaderComponent);
     component = fixture.componentInstance;
